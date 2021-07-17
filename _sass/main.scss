@@ -1,12 +1,17 @@
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-$grass: url('/assets/images/texture-grass.png');
-$grey: rgb(202, 201, 201);
-$dirt: url('/assets/images/texture-dirt.jpg');
-$color-gold: rgb(226, 150, 7);
-$rock: url('/assets/images/texture-dark.gif'); 
-$diamond: url('/assets/images/texture-diamond.png');
+// colors
+$color-grey: rgb(202, 201, 201);
+$color-gold: rgb(224, 149, 10);
+// game textures
+$texture-grass: url('/assets/images/texture-grass.png');
+$texture-dirt: url('/assets/images/texture-dirt.jpg');
+$texture-rock: url('/assets/images/texture-dark.gif'); 
+$texture-diamond: url('/assets/images/texture-diamond.png');
+$pic-sky: url('/assets/images/sky.png');
+$pic-landscape: url('/assets/images/landscape.png');
+
 
 body {
   background: $backgroundColor;
@@ -25,6 +30,8 @@ h2 {
   font-size: 30px;
   background-color: $color-gold;
   padding:5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h3 {
@@ -34,27 +41,32 @@ p {
   font-size: 15px;
 }
 header {
-  background-color: skyblue;
+  background-image: $pic-sky;
+  background-position: 59% 83%;
   padding: 2px 0px 2px 0px;
 }
 a {
   color: $color-gold;
   text-decoration: none;
+  // back
 }
 
 header ul {
+  text-align: center;
   display: flex;
   list-style-type: none;
+  justify-content: center;  
+  padding:0px;
 }
 header li {
-  padding-right: 8px;
+  padding-right: 2px;
   text-transform: uppercase;
   font-weight: bolder;
 }
-
-// .row {
-//   display: flex;
-// }
+header a {
+  background-color: white;
+  padding:1px;
+}
 
 #home-welcome {
   text-align: center;
@@ -83,7 +95,8 @@ header li {
 }
 
 #home-features {
-  background-color: pink;
+  background-image: $pic-sky;
+  padding-bottom: 50px;
 }
 
 #home-features p {
@@ -95,8 +108,8 @@ header li {
 }
 
 #home-connect {
-  background-image: $dirt;
-  background-color: $grey;
+  background-image: $texture-dirt;
+  background-color: $color-grey;
 }
 #home-connect-servers h4 {
   background-color: black;
@@ -113,7 +126,7 @@ header li {
 }
 
 #home-donate {
-  background-image: $diamond;
+  background-image: $texture-diamond;
 }
 
 #home-donate-addresses p {
@@ -129,7 +142,54 @@ header li {
 footer {
   text-align: center;
   padding:10px;
-  height: 100px;
+  height: 20px;
   color: white;
-  background-image: $rock;
+  background-image: $texture-rock;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+ #logo,#home-connect-servers, #home-features-list,
+ #home-donate-addresses {
+   width: 500px;
+   justify-content: center;
+   margin: auto;
+ }
+ h2 {
+   margin-left:20px;
+ }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  #logo,#home-connect-servers, #home-features-list,
+ #home-donate-addresses {
+   width: 700px;
+   justify-content: center;
+   margin: auto;
+ }
+ h2 {
+  margin-left:100px;
+}
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/ 
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+ 
+}
+ 
