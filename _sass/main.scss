@@ -1,195 +1,264 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$bodyFont: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Helvetica,
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
 // colors
-$color-grey: rgb(202, 201, 201);
-$color-gold: rgb(224, 149, 10);
+$color-grey: rgb(202,201,201);
+$color-gold: rgb(237, 122, 6);
+$color-yellow: #eed971ff;
+$color-diamond: rgb(150,221,249);
 // game textures
-$texture-grass: url('/assets/images/texture-grass.png');
-$texture-dirt: url('/assets/images/texture-dirt.jpg');
-$texture-rock: url('/assets/images/texture-dark.gif'); 
-$texture-diamond: url('/assets/images/texture-diamond.png');
-$pic-sky: url('/assets/images/sky.png');
-$pic-landscape: url('/assets/images/landscape.png');
-
-
+$texture-grass: url("/assets/images/texture-grass.png");
+$texture-dirt: url("/assets/images/texture-dirt.jpg");
+$texture-rock: url("/assets/images/texture-dark.gif");
+$texture-diamond: url("/assets/images/texture-diamond.png");
+$pic-sky: url("/assets/images/sky.png");
+$pic-landscape: url("/assets/images/landscape.png");
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
-  margin: 0; 
-  padding: 0;
+	color: $bodyColor;
+	margin: 0;
+	padding: 0;
+  font-family: 'Alata', sans-serif;
 }
 
 h1 {
-  font-size: 35px;
+	font-size: 35px;
 }
+
 h2 {
-  color:white;
-  display: table;
-  font-size: 30px;
-  background-color: $color-gold;
-  padding:5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+	color: white;
+	display: table;
+	font-size: 30px;
+	background-color: $color-gold;
+	padding: 5px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 h3 {
-  font-size: 25px;
+	font-size: 25px;
 }
+
 p {
-  font-size: 15px;
+	font-size: 14px;
+	font-family: "Roboto", sans-serif;
 }
+
 header {
-  background-image: $pic-sky;
-  background-position: 59% 83%;
-  padding: 2px 0px 2px 0px;
+	background-image: $pic-sky;
+	background-position: 59% 83%;
+	padding: 2px 0px 2px 0px;
 }
+
 a {
-  color: $color-gold;
-  text-decoration: none;
-  // back
+	color: $color-gold;
+	text-decoration: none;
 }
+
+.container {
+	width: 100%;
+}
+
 
 header ul {
-  text-align: center;
-  display: flex;
-  list-style-type: none;
-  justify-content: center;  
-  padding:0px;
-}
-header li {
-  padding-right: 2px;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-header a {
-  background-color: white;
-  padding:1px;
+	text-align: center;
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	padding: 0px;
 }
 
-#home-welcome {
-  text-align: center;
-  background-image: url('/assets/images/bitquest-map-lg.jpg');
-  padding:8px;
-  color:white;
-  text-shadow: 2px 2px rgb(67, 67, 67);
+header li {
+	padding-right: 2px;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+header a {
+	background-color: white;
+	padding: 1px;
 }
 
 #logo img {
   width: 80%;
 }
-#home-connect, #home-features, #home-donate {
-  padding:10px;
+#home-welcome {
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px rgb(67, 67, 67);
 }
 
-.feature {
-  display: flex;
+#home-connect,
+#home-features,
+#home-donate {
+	padding: 10px;
+}
+#home-welcome, #home-connect {
+  background-color: $color-yellow;
+}
+#home-welcome h3 {
+  background-color: black;
+  display: table;
+  padding: 4px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
-.feature-image {
-  width: 160px;
-  height: 160px;
-  border-radius: 100%;
-  background-color: rgb(174, 249, 209);
+.single-content {
+	display: flex;
+}
+
+.single-content img {
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	background-color: rgb(174, 249, 209);
+}
+.single-server {
+  width: 100%;
+  padding: 0px 4px 0px 4px;
+}
+
+.wallet {
+  width: 100%;
+  padding: 0px 4px 0px 4px;
 }
 
 #home-features {
-  background-image: $pic-sky;
-  padding-bottom: 50px;
+	padding-bottom: 50px;
+	background-color: white;
 }
 
 #home-features p {
-  font-size: 20px;
-  padding-left:20px;
+	font-size: 20px;
+	padding-left: 20px;
+	font-weight: lighter;
 }
-#home-features h3{
-  text-align: center;
+
+#home-features h3 {
+	text-align: center;
 }
 
 #home-connect {
-  background-image: $texture-dirt;
-  background-color: $color-grey;
+	color: black;
 }
+
 #home-connect-servers h4 {
-  background-color: black;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: lighter;
-  padding: 5px;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
-  text-shadow: 1px 1px rgb(140, 139, 139);
+	background-color: black;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: lighter;
+	padding: 5px;
+	border-style: solid;
+	border-color: $color-grey;
+	border-width: 2px;
+	text-shadow: 1px 1px rgb(140, 139, 139);
 }
-#home-connect-servers p,h4 {
-  color: white;
+
+#home-connect-servers h4 {
+	color: white;
 }
 
 #home-donate {
-  background-image: $texture-diamond;
+	background-color: $color-diamond;
 }
 
 #home-donate-addresses p {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: white;
-  padding: 5px;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  text-shadow: 1px 1px rgb(161, 161, 161);
+	font-family: "Courier New", Courier, monospace;
+	background-color: white;
+	padding: 5px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	text-shadow: 1px 1px rgb(161, 161, 161);
 }
 
 footer {
-  text-align: center;
-  padding:10px;
-  height: 20px;
-  color: white;
-  background-image: $texture-rock;
+	text-align: center;
+	padding: 10px;
+	height: 20px;
+	color: white;
+	background-image: $texture-dirt;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
- #logo,#home-connect-servers, #home-features-list,
- #home-donate-addresses {
-   width: 500px;
-   justify-content: center;
-   margin: auto;
- }
- h2 {
-   margin-left:20px;
- }
-}
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
- 
-}
- 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  #logo,#home-connect-servers, #home-features-list,
- #home-donate-addresses {
-   width: 700px;
-   justify-content: center;
-   margin: auto;
- }
- h2 {
-  margin-left:100px;
-}
-}
- 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-    
+// breakpoints
+@media (min-width: 375) {
+	header li {
+		font-size: 14px;
+	}
 }
 
- 
-/*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Custom media queries
-*/ 
-/* Set width to make card deck cards 100% width */
-@media (max-width: 950px) { 
- 
+@media (min-width: 576px) {
+	#logo,
+	#home-connect-servers,
+	#home-features-list,
+	#home-donate-addresses {
+		justify-content: center;
+		margin: auto;
+	}
+	.container {
+		width: 500px;
+		margin: 0 auto;
+	}
 }
- 
+
+@media (min-width: 768px) {
+  header a {
+    font-size: 25px;
+  }
+  header li {
+    padding: 0px 5px 0px 5px;
+  }
+}
+
+@media (min-width: 992px) {
+	#logo,
+	#home-connect-servers,
+	#home-features-list,
+	#home-donate-addresses {
+		justify-content: center;
+		margin: auto;
+	}
+
+	.container {
+		width: 760px;
+		margin: 0 auto;
+	}
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .single-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    padding: 0px 10px 0px 10px;
+  }
+  .single-content img {
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+		width: 992px;
+		margin: 0 auto;
+	}
+  .single-content {
+    width: 300px;
+  }
+}
+
+@media (max-width: 950px) {}
+
